@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hmr</title>
-    <link href='./style.css' rel='stylesheet'>
+    <link href='../style.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -15,27 +15,60 @@
 
     <main class="container-main">
         <ul>
- 
+
+            <li>
+            <li class="li-main-info font-r-rem">Easymind</li>
+            <li class="li-sub-info font-s-rem">Producer | Plunderphonics</li>
+            </li>
+
+            <li class="li-main-info font-r-rem">
+                <div href="../release/cf.html" class="data-href">
+                    <div class="image-container">
+                        <img class="thumbnail" src="../src/img_300.png" alt="cf-cover">
+                        <img class="original-image" src="../src/img_300.png" alt="cf-cover">
+                    </div>
+                    <span>cf (cheap food)</span>
+                    <span class="font-s-rem"> experimental-hiphop | <span class="time"
+                            data-timestamp="2006-02-07T10:00:00Z"></span> | <span>out-link</span>
+                    </span>
+                </div>
+            </li>
+
+            <li>
+                <div class="profile-container" onmouseleave="resetImage()">
+                    <div id="profile-img-viewer">
+                        <img id="main-image" src="../src/a-p-Easymind.jpg" alt="easymind-profile-1">
+                    </div>
+
+                    <div class="profile-thumbnail-container">
+                        <div class="profile-thumbnail"
+                            onmouseover="swapImage('../src/a-p-Easymind-2.jpg', 'profile-2')">
+                            <img src="../src/a-p-Easymind-2.jpg" alt="easymind-profile-2">
+                        </div>
+                        <div class="profile-thumbnail"
+                            onmouseover="swapImage('../src/a-p-Easymind-3.jpg', 'profile-3')">
+                            <img src="../src/a-p-Easymind-3.jpg" alt="easymind-profile-3">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
         </ul>
-
-
-
     </main>
 
     <footer class="container-footer font-s-rem">
         <hr>
         <div class="footer-item">
-            <span href="./page/guidelines.html" class="data-href">Guidelines</span> |  <span href="./page/Contact.html" class="data-href">Contact</span>
+            <span href="../page/guidelines.html" class="data-href">Guidelines</span> | <span href="../page/contact.html"
+                class="data-href">Contact</span>
         </div>
     </footer>
 
 </body>
-<script defer type="text/javascript" src="./main.js"></script>
+<script defer type="text/javascript" src="../main.js"></script>
 
 </html>
 <div class="memo">
     배주니 앨범
     #1.
-
-
 </div>

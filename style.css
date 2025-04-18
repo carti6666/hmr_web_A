@@ -57,12 +57,15 @@
     margin: 0;
     }
 
-    .li-release-item {
+    .li-main-info {
         padding-top: 12px;
     }
 
     .li-sub-info {
         padding-top: 2px;
+    }
+
+    .li-sub-padding {
         padding-left: 23px;
     }
     
@@ -108,6 +111,47 @@
     display: block;
     }
 
+/** 보드 갤러리 이미지 후버 관련 **/
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    #profile-img-viewer {
+        height: 300px;
+        margin-bottom: 6px;
+    }
+
+    #profile-img-viewer img {
+        display: block;
+        width: auto;
+        height: 300px;
+    }
+
+    .profile-thumbnail-container {
+        display: flex;
+    }
+
+    .profile-thumbnail {
+        height: 21px;
+        margin-right: 4px;
+    }
+
+    .profile-thumbnail img {
+        display: block;
+        width: 100%;
+        height: 21px;
+    }
+
+    .profile-thumbnail:last-child {
+        margin-right: 0;
+    }
+
+/** 보드 관련 **/
+    .artist-info-container {
+        padding-top: 2px;
+    }
 
 /* data-href 관련*/
 
