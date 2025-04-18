@@ -1,0 +1,152 @@
+    .memo {
+    display: none;
+    }
+
+/** 시스템 관련 **/
+
+    :root {
+    font-size: 13px;
+    }
+
+    body {
+    font-family: monospace;
+    }
+
+    .container,
+    .container-main,
+    .container-footer {
+    width: 100%;
+    }
+
+    .container-main {
+    padding-top: 12px;
+    }
+
+    .container-footer {
+    padding-top: 30px;
+    }
+
+    .footer-item {
+        padding-top: 12px;
+    }
+
+    .font-r-rem {
+    font-size: 1rem;
+    }
+
+    .font-s-rem {
+    font-size: 0.9rem;
+    }
+
+/** 헤더 관련 **/
+    .header-main {
+    display: flex; /* Flex 컨테이너로 설정 */
+    align-items: center; /* 세로 방향 중앙 정렬 (교차 축 정렬) */
+    height: 22px; /* 기본 높이 설정 (원하는 높이로 변경 가능) */
+    padding: none;
+    background-color: none;
+    justify-content: space-between; /* 내부 요소들을 양 끝으로 배치 (선택 사항) */
+    }
+
+/** release 섹션 관련 **/
+
+    ul,
+    li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .li-release-item {
+        padding-top: 12px;
+    }
+
+    .li-sub-info {
+        padding-top: 2px;
+        padding-left: 23px;
+    }
+    
+/** 이미지 (후버) 관련 **/
+    .image-container {
+    position: relative;
+    display: inline-block;
+    }
+
+    .thumbnail {
+    width: 18px;
+    height: auto;
+    cursor: pointer;
+    }
+
+    .original-image {
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+    top: 100%;
+    transform: translate(18px, 0);
+    }
+
+    .image-container:hover .original-image {
+    display: block;
+    }
+
+    /* 모바일 환경에서 원본 이미지 숨김 (혹시 JS가 작동 안 하더라도) */
+    @media (max-width: 480px) {
+    .original-image {
+        width: 200px !important;
+    }
+    }
+
+    /* 클릭 시 원본 이미지 표시 */
+    .image-container.active .original-image {
+    display: block;
+    }
+
+
+/* data-href 관련*/
+
+.data-href {
+    cursor: pointer;
+}
+
+/** 반응형 관련 **/
+
+    @media (min-width: 480px) {
+    .container {
+        max-width: 480px;
+    }
+    }
+
+    @media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+    }
+
+    @media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    }
+
+    @media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+    }
+
+    @media (min-width: 1366px) {
+    .container {
+        max-width: 1366px;
+    }
+    }
+
+    @media (min-width: 1920px) {
+    .container {
+        max-width: 1920px;
+    }
+    }
