@@ -70,6 +70,8 @@
     .image-container {
     position: relative;
     display: inline-block;
+    line-height: 0;
+    vertical-align: bottom;
     }
 
     .thumbnail {
