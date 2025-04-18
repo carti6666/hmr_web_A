@@ -140,7 +140,7 @@
 
     .profile-thumbnail img {
         display: block;
-        width: 100%;
+        width: auto;
         max-height: 21px;
     }
 
