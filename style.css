@@ -119,14 +119,14 @@
     }
 
     #profile-img-viewer {
-        height: 300px;
+        max-height: 300px;
         margin-bottom: 6px;
     }
 
     #profile-img-viewer img {
         display: block;
         width: auto;
-        height: 300px;
+        max-height: 300px;
     }
 
     .profile-thumbnail-container {
@@ -134,14 +134,14 @@
     }
 
     .profile-thumbnail {
-        height: 21px;
+        max-height: 21px;
         margin-right: 4px;
     }
 
     .profile-thumbnail img {
         display: block;
         width: 100%;
-        height: 21px;
+        max-height: 21px;
     }
 
     .profile-thumbnail:last-child {
