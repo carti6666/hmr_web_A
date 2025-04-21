@@ -45,15 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /** href temp */
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.data-href').forEach(element => {
+    document.querySelectorAll('.data-href, .data-href-outlink').forEach(element => {
     element.style.cursor = 'pointer';
-
     const hrefValue = element.getAttribute('href');
+
     if (hrefValue) {
         element.dataset.href = hrefValue;
         element.addEventListener('click', (event) => {
-          event.preventDefault(); // 기본 링크 이동 막기
-          window.location.href = element.dataset.href; // 현재 창에서 URL 이동
+        event.preventDefault();
+        if (element.classList.contains('data-href-outlink')) {
+            window.open(element.dataset.href, '_blank');
+        } else {
+            window.location.href = element.dataset.href;
+        }
         });
         element.removeAttribute('href');
     }
@@ -63,17 +67,17 @@ document.addEventListener('DOMContentLoaded', () => {
 /** 보드 이미지 갤러리 */
 
 const galleryContainer = document.querySelector('.profile-container'); // 변경된 클래스 이름
-  const mainImageViewer = document.getElementById('profile-img-viewer'); // 변경된 ID
-  const mainImage = mainImageViewer.querySelector('img'); // area-img-viewer 안의 img 태그 선택
-  const originalSrc = mainImage.src;
-  const originalAlt = mainImage.alt;
+  const mainImageViewer = document.getElementById('profile-img-viewer'); // 변경된 ID
+  const mainImage = mainImageViewer.querySelector('img'); // area-img-viewer 안의 img 태그 선택
+const originalSrc = mainImage.src;
+const originalAlt = mainImage.alt;
 
-  function swapImage(newSrc, newAlt) {
-    mainImage.src = newSrc;
-    mainImage.alt = newAlt;
-  }
+function swapImage(newSrc, newAlt) {
+    mainImage.src = newSrc;
+    mainImage.alt = newAlt;
+}
 
-  function resetImage() {
-    mainImage.src = originalSrc;
-    mainImage.alt = originalAlt;    
-  }
+function resetImage() {
+    mainImage.src = originalSrc;
+    mainImage.alt = originalAlt;    
+}

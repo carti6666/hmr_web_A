@@ -9,17 +9,60 @@
 </head>
 
 <body>
-    <header class="container header-main">
-        <div class="go-back"><img src="../src/arrow.svg" class="header-arrow"></div><span class="header-lable">hustle muscle records</span>
+    <header class="container header-main pb-30">
+        <div class="go-back"><img src="../src/arrow.svg" class="header-arrow"></div><span href="../index.html"
+            class="header-label data-href">hustle muscle records</span>
     </header>
 
-    <main class="container container-main">
+    <main class="container">
+        <ul>
 
+
+            <li>
+                <div class="profile-container" onmouseleave="resetImage()">
+                    <div id="profile-img-viewer">
+                        <img id="main-image" src="../src/img_300.png" alt="cover_a">
+                    </div>
+
+                    <div class="profile-thumbnail-container">
+                        <div class="profile-thumbnail" onmouseover="swapImage('../src/img_300.png', 'cover_a')">
+                            <img src="../src/img_300.png" alt="covoer_a">
+                        </div>
+                        <div class="profile-thumbnail" onmouseover="swapImage('../src/img_300_b.png', 'cover_b')">
+                            <img src="../src/img_300_b.png" alt="cover_b">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+            <li class="li-main-info font-r-rem">cf (cheap food)</li>
+            <li class="li-sub-info font-s-rem">by <span href="../artist/easymind.html" class="data-href">Easymind</span>
+                | Plunderphonics</li>
+            </li>
+        </ul>
+        <ol class="ol-tracklist font-s-rem">
+            <li><span class="li-tracklist">01. </span>DJ Preemium</li>
+            <li><span class="li-tracklist">02. </span>i n p u t (eater)</li>
+            <li><span class="li-tracklist">03. </span>9 2 b p m</li>
+            <li><span class="li-tracklist">04. </span>Micro Checker</li>
+            <li><span class="li-tracklist">05. </span>Video Taped</li>
+            <li><span class="li-tracklist">06. </span>Til (Library Machine)</li>
+            <li><span class="li-tracklist">07. </span>End Day of Millitary Service</li>
+            <li><span class="li-tracklist">08. </span>absent since young</li>
+            <li><span class="li-tracklist">09. </span>No Fun</li>
+            <li><span class="li-tracklist">10. </span>Do Up</li>
+            <li><span class="li-tracklist">11. </span>good food bad mood</li>
+            <li><span class="li-tracklist">12. </span>(3)</li>
+            <li><span class="li-tracklist">13. </span>Elaise</li>
+            <li><span class="li-tracklist">14. </span>Jackin</li>
+            <li><span class="li-tracklist">15. </span>gone forever get lost when i'm lost</li>
+        </ol>
     </main>
 
-    <footer class="container-footer font-s-rem">
+    <footer class="font-s-rem">
         <hr>
-        <div class="footer-item">
+        <div>
             <span href="../page/guidelines.html" class="data-href">Guidelines</span> | <span href="../page/contact.html"
                 class="data-href">Contact_A</span>
         </div>
@@ -29,7 +72,6 @@
 <script defer type="text/javascript" src="../main.js"></script>
 
 </html>
-<div class="memo">
-    배주니 앨범
-    #1.
+<div>
+
 </div>

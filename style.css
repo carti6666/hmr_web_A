@@ -19,15 +19,15 @@
     }
 
     .container-main {
-    padding-top: 12px;
+
     }
 
     .container-footer {
-    padding-top: 30px;
+
     }
 
     .footer-item {
-        padding-top: 12px;
+
     }
 
     .font-r-rem {
@@ -38,17 +38,25 @@
     font-size: 0.9rem;
     }
 
+
+/** section padding 관련 **/
+    .li-release-list {
+
+    }
+
+
+
 /** 헤더 관련 **/
     .header-main {
-    display: flex; /* Flex 컨테이너로 설정 */
-    align-items: center; /* 세로 방향 중앙 정렬 (교차 축 정렬) */
-    height: 22px; /* 기본 높이 설정 (원하는 높이로 변경 가능) */
+    display: flex;
+    align-items: center;
+    height: 22px;
     padding: none;
     background-color: none;
     color: blue;
     }
 
-    .header-lable {
+    .header-label {
         position: relative;
         bottom: 1px;
     }
@@ -59,7 +67,7 @@
     }
 
     .go-back {
-        cursor: pointer; /* 클릭 가능함을 나타내는 커서 */
+        cursor: pointer;
     }
 
 /** release 섹션 관련 **/
@@ -71,20 +79,43 @@
     margin: 0;
     }
 
-    .li-main-info {
-        padding-top: 12px;
+    ol {
+        padding: 0;
+        margin: 0;
+        list-style-type: decimal;
+    }
+
+    ol li {
+        list-style-type: decimal;
+    }
+
+    .pl-23 {
+        padding-left: 23px;
+    }
+
+    .pt-30 {
+        padding-top: 30px;
+    }
+
+    .pb-30 {
+        padding-bottom: 30px;
     }
 
     .li-sub-info {
-        padding-top: 2px;
+    padding-top: 4px;
+    padding-bottom: 12px;
     }
 
-    .li-sub-padding {
-        padding-left: 23px;
+    .ol-tracklist {
+
     }
-    
+
+    .ol-tracklist > li {
+        padding-right: 4px;
+    }
+
 /** 이미지 (후버) 관련 **/
-    .image-container {
+    .cover-container {
     position: relative;
     display: inline-block;
     line-height: 0;
@@ -109,7 +140,7 @@
     transform: translate(18px, 0);
     }
 
-    .image-container:hover .original-image {
+    .cover-container:hover .original-image {
     display: block;
     }
 
@@ -121,7 +152,7 @@
     }
 
     /* 클릭 시 원본 이미지 표시 */
-    .image-container.active .original-image {
+    .cover-container.active .original-image {
     display: block;
     }
 
@@ -129,7 +160,6 @@
     .profile-container {
         display: flex;
         flex-direction: column;
-        padding-top: 30px;
         max-width: 100%
     }
 
@@ -168,12 +198,13 @@
 
 /** 보드 관련 **/
     .artist-info-container {
-        padding-top: 2px;
+
     }
 
 /* data-href 관련*/
 
-.data-href {
+.data-href,
+.data-href-outlink {
     cursor: pointer;
 }
 
