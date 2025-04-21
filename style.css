@@ -45,7 +45,21 @@
     height: 22px; /* 기본 높이 설정 (원하는 높이로 변경 가능) */
     padding: none;
     background-color: none;
-    justify-content: space-between; /* 내부 요소들을 양 끝으로 배치 (선택 사항) */
+    color: blue;
+    }
+
+    .header-lable {
+        position: relative;
+        bottom: 1px;
+    }
+
+    .header-arrow {
+        max-height: 15px;
+        padding-right: 6px;  
+    }
+
+    .go-back {
+        cursor: pointer; /* 클릭 가능함을 나타내는 커서 */
     }
 
 /** release 섹션 관련 **/

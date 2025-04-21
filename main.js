@@ -32,10 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /** 뒤로가기 기능   <button onclick="goBack()">뒤로 가기</button> */
-function goBack() {
-    window.history.back();
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const goBackDivs = document.querySelectorAll('.go-back');
 
+    goBackDivs.forEach(div => {
+    div.addEventListener('click', () => {
+        window.history.back();
+    });
+    });
+});
 /** 이미지 후버 temp */
 
 /** href temp */
