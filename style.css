@@ -122,6 +122,7 @@
     #profile-img-viewer {
         max-height: 300px;
         margin-bottom: 6px;
+        max-width: 100%;
     }
 
     #profile-img-viewer img {
@@ -132,9 +133,11 @@
 
     .profile-thumbnail-container {
         display: flex;
+        max-width: 100%;
     }
 
     .profile-thumbnail {
+        max-width: 100%;
         max-height: 21px;
         margin-right: 4px;
     }
