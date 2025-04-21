@@ -51,8 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const hrefValue = element.getAttribute('href');
     if (hrefValue) {
         element.dataset.href = hrefValue;
-        element.addEventListener('click', () => {
-        window.open(element.dataset.href, '_blank');
+        element.addEventListener('click', (event) => {
+          event.preventDefault(); // 기본 링크 이동 막기
+          window.location.href = element.dataset.href; // 현재 창에서 URL 이동
         });
         element.removeAttribute('href');
     }
