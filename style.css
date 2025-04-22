@@ -2,6 +2,11 @@
     display: none;
     }
 
+    header,
+    main {
+        padding-bottom: 30px;
+    }
+
 /** 시스템 관련 **/
 
     :root {
@@ -18,20 +23,9 @@
     width: 100%;
     }
 
-    .container-main {
-
-    }
-
-    .container-footer {
-
-    }
-
-    .footer-item {
-
-    }
-
     .font-r-rem {
     font-size: 1rem;
+
     }
 
     .font-s-rem {
@@ -40,11 +34,48 @@
 
 
 /** section padding 관련 **/
-    .li-release-list {
+    .release-section {
 
     }
 
+    .release-section-list {
+    line-height: calc(1ex / 0.32);
+    }
 
+    .release-section-info {
+    padding-bottom: calc(1ex / 0.32/2);
+    line-height: calc(1ex / 0.32);
+    padding-left: 23px;
+    }
+
+    .artist-section-info {
+        padding-bottom: 30px;
+    }
+
+    .artist-section-sub-info {
+        line-height: calc(1ex / 0.32);
+    }
+
+    .artist-section-name {
+        padding-bottom: px;
+    }
+
+    .artist-section-release-list {
+        padding-bottom: 30px;
+    }
+    
+    .artist-section-discription {
+        max-width: 600px;
+        padding-bottom: calc(1ex / 0.32 );
+    }
+
+    .artist-section-profile-wrapper {
+        padding-bottom: 30px;
+    }
+
+    .line-height {
+        line-height: 1.4;
+    }
 
 /** 헤더 관련 **/
     .header-main {
@@ -82,32 +113,6 @@
     ol {
         padding: 0;
         margin: 0;
-        list-style-type: decimal;
-    }
-
-    ol li {
-        list-style-type: decimal;
-    }
-
-    .pl-23 {
-        padding-left: 23px;
-    }
-
-    .pt-30 {
-        padding-top: 30px;
-    }
-
-    .pb-30 {
-        padding-bottom: 30px;
-    }
-
-    .li-sub-info {
-    padding-top: 4px;
-    padding-bottom: 12px;
-    }
-
-    .ol-tracklist {
-
     }
 
     .ol-tracklist > li {
@@ -123,7 +128,7 @@
     }
 
     .thumbnail {
-    width: 18px;
+    width: calc(1ex / 0.32);
     height: auto;
     cursor: pointer;
     }
@@ -182,14 +187,14 @@
 
     .profile-thumbnail {
         max-width: 100%;
-        max-height: 21px;
+        max-height: calc(1ex / 0.32);
         margin-right: 4px;
     }
 
     .profile-thumbnail img {
         display: block;
         max-width: 100%;
-        max-height: 21px;
+        max-height: calc(1ex / 0.32);
     }
 
     .profile-thumbnail:last-child {
@@ -197,9 +202,6 @@
     }
 
 /** 보드 관련 **/
-    .artist-info-container {
-
-    }
 
 /* data-href 관련*/
 
@@ -244,4 +246,26 @@
     .container {
         max-width: 1920px;
     }
+    }
+
+    .shadow-underline-simple {
+        text-shadow: 1px 2px 2px #000fff;
+        text-decoration: underline;
+        text-decoration-color: #000fff;
+        text-underline-offset: 3px;
+    }
+
+    .underline-wrapper {
+        position: relative;
+        display: inline-block; /* 또는 block에 따라 */
+        padding-bottom: 1px; /* 언더라인과의 간격 조정 */
+    }
+    
+    .underline-wrapper::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 15px;
+        border-bottom: 1.5px solid #000fff; /* 언더라인 스타일 */
     }

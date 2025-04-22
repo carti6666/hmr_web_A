@@ -81,3 +81,11 @@ function resetImage() {
     mainImage.src = originalSrc;
     mainImage.alt = originalAlt;    
 }
+
+
+
+
+const shadowElements = document.querySelectorAll('.shadow-underline-pseudo');
+shadowElements.forEach(element => {
+element.dataset.text = element.textContent;
+});
