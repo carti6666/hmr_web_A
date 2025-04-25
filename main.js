@@ -1,6 +1,5 @@
-/** class time 에 대한 기입날짜 계산 */
-
-function timeAgoInDays(timestamp) {
+    //times-ago-call//
+    function timeAgoInDays(timestamp) {
     const now = new Date();
     const past = new Date(timestamp);
     const diffInSeconds = Math.floor((past - now) / 1000);
@@ -14,78 +13,110 @@ function timeAgoInDays(timestamp) {
     } else {
         return `${diffInDays} days left`;
     }
-}
+    }
 
-function updateTimeAgo() {
+    function updateTimeAgo() {
     const timeAgoElements = document.querySelectorAll(".time");
     timeAgoElements.forEach((element) => {
         const timestamp = element.dataset.timestamp;
         if (timestamp) {
-            element.textContent = timeAgoInDays(timestamp);
+        element.textContent = timeAgoInDays(timestamp);
         }
     });
-}
+    }
 
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
     updateTimeAgo();
     setInterval(updateTimeAgo, 60000);
-});
+    });
 
-/** 뒤로가기 기능   <button onclick="goBack()">뒤로 가기</button> */
-document.addEventListener('DOMContentLoaded', () => {
-    const goBackDivs = document.querySelectorAll('.go-back');
+    //func-go-back//
+    document.addEventListener("DOMContentLoaded", () => {
+    const goBackDivs = document.querySelectorAll(".go-back");
 
-    goBackDivs.forEach(div => {
-    div.addEventListener('click', () => {
+    goBackDivs.forEach((div) => {
+        div.addEventListener("click", () => {
         window.history.back();
+        });
     });
     });
-});
-/** 이미지 후버 temp */
 
-/** href temp */
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.data-href, .data-href-outlink').forEach(element => {
-    element.style.cursor = 'pointer';
-    const hrefValue = element.getAttribute('href');
+    //이미지 후버 temp//
 
-    if (hrefValue) {
-        element.dataset.href = hrefValue;
-        element.addEventListener('click', (event) => {
-        event.preventDefault();
-        if (element.classList.contains('data-href-outlink')) {
-            window.open(element.dataset.href, '_blank');
-        } else {
-            window.location.href = element.dataset.href;
+    //func-data-href//
+    document.addEventListener("DOMContentLoaded", () => {
+    document
+        .querySelectorAll(".data-href, .data-href-outlink")
+        .forEach((element) => {
+        element.style.cursor = "pointer";
+        const hrefValue = element.getAttribute("href");
+
+        if (hrefValue) {
+            element.dataset.href = hrefValue;
+            element.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (element.classList.contains("data-href-outlink")) {
+                window.open(element.dataset.href, "_blank");
+            } else {
+                window.location.href = element.dataset.href;
+            }
+            });
+            element.removeAttribute("href");
         }
         });
-        element.removeAttribute('href');
-    }
     });
-});
 
-/** 보드 이미지 갤러리 */
+    //board-gallery//
+    const galleryContainer = document.querySelector(".profile-container"); //변경된 클래스 이름
+    const mainImageViewer = document.getElementById("profile-img-viewer"); //변경된 ID
+    const mainImage = mainImageViewer.querySelector("img"); //area-img-viewer 안의 img 태그 선택
+    const originalSrc = mainImage.src;
+    const originalAlt = mainImage.alt;
 
-const galleryContainer = document.querySelector('.profile-container'); // 변경된 클래스 이름
-  const mainImageViewer = document.getElementById('profile-img-viewer'); // 변경된 ID
-  const mainImage = mainImageViewer.querySelector('img'); // area-img-viewer 안의 img 태그 선택
-const originalSrc = mainImage.src;
-const originalAlt = mainImage.alt;
-
-function swapImage(newSrc, newAlt) {
+    function swapImage(newSrc, newAlt) {
     mainImage.src = newSrc;
     mainImage.alt = newAlt;
-}
+    }
 
-function resetImage() {
+    function resetImage() {
     mainImage.src = originalSrc;
-    mainImage.alt = originalAlt;    
-}
+    mainImage.alt = originalAlt;
+    }
+
+    //언더라인 //
+    const shadowElements = document.querySelectorAll(".shadow-underline-pseudo");
+    shadowElements.forEach((element) => {
+    element.dataset.text = element.textContent;
+    });
+
+    //numbering-padding-call/
+    document.addEventListener("DOMContentLoaded", () => {
+    const aSpan = document.getElementById("span-numbering");
+    const bSpan = document.getElementById("number-padding");
+
+    if (aSpan && bSpan) {
+        const aSpanWidth = aSpan.offsetWidth;
+        bSpan.style.paddingLeft = `${aSpanWidth}px`;
+        console.log(`A Span Width: ${aSpanWidth}px`);
+        console.log(`B Span Padding-Left: ${bSpan.style.paddingLeft}`);
+    } else {
+        console.error("A Span 또는 B Span 요소를 찾을 수 없습니다.");
+    }
+    });
 
 
+    const textSwapContainer = document.querySelector('.text-swap-container');
+const englishText = document.querySelector('.english-text');
+const koreanText = document.querySelector('.korean-text');
 
+textSwapContainer.addEventListener('mouseenter', () => {
+    textSwapContainer.style.minHeight = koreanText.offsetHeight + 'px';
+    englishText.style.display = 'none';
+    koreanText.style.display = 'block';
+});
 
-const shadowElements = document.querySelectorAll('.shadow-underline-pseudo');
-shadowElements.forEach(element => {
-element.dataset.text = element.textContent;
+textSwapContainer.addEventListener('mouseleave', () => {
+    textSwapContainer.style.minHeight = englishText.offsetHeight + 'px';
+    englishText.style.display = 'block';
+    koreanText.style.display = 'none';
 });

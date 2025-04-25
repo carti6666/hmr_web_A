@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hmr</title>
-    <link href='./style.css' rel='stylesheet'>
+    <link href='../style.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,7 +20,7 @@
         <ul>
             <li class="release-section-list font-r-rem">
                 <div>
-                    <span>1.</span>
+                    <span id="span-numbering">1.</span>
                     <div class="cover-container">
                         <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
                         <img class="original-image" src="./src/img_300.png" alt="cf-cover">
@@ -27,8 +30,9 @@
             </li>
 
             <li class="release-section-info font-s-rem">
-                by <span href="./artist/easymind.html" class="data-href">Easymind</span> | experimental-hiphop | <span
-                    class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
+                <span id="number-padding">by </span><span href="./artist/easymind.html"
+                    class="data-href">Easymind</span> | experimental-hiphop | <span class="time"
+                    data-timestamp="2006-02-07T10:00:00Z"></span> |
                 <span href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
                     class="data-href-outlink">↗</span>
             </li>

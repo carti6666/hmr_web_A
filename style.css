@@ -4,17 +4,18 @@
 
     header,
     main {
-        padding-bottom: 30px;
+    padding-bottom: 30px;
     }
 
-/** 시스템 관련 **/
+    /** 시스템 관련 **/
 
     :root {
     font-size: 13px;
+    font-weight: 450;
     }
 
     body {
-    font-family: monospace;
+    font-family: "Noto Sans Mono", monospace;
     }
 
     .container,
@@ -25,59 +26,51 @@
 
     .font-r-rem {
     font-size: 1rem;
-
     }
 
     .font-s-rem {
     font-size: 0.9rem;
     }
 
-
-/** section padding 관련 **/
-    .release-section {
-
-    }
-
+    /** section padding 관련 **/
     .release-section-list {
     line-height: calc(1ex / 0.32);
     }
 
     .release-section-info {
-    padding-bottom: calc(1ex / 0.32/2);
+    padding-bottom: calc(1ex / 0.32 / 2);
     line-height: calc(1ex / 0.32);
     padding-left: 23px;
     }
 
-    .artist-section-info {
-        padding-bottom: 30px;
-    }
-
     .artist-section-sub-info {
-        line-height: calc(1ex / 0.32);
+    line-height: calc(1ex / 0.32);
     }
 
     .artist-section-name {
-        padding-bottom: px;
+    padding-bottom: px;
     }
 
     .artist-section-release-list {
-        padding-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     }
-    
+
     .artist-section-discription {
-        max-width: 600px;
-        padding-bottom: calc(1ex / 0.32 );
+    max-width: 600px;
+    padding-bottom: calc(1ex / 0.32);
+    text-align: justify; 
     }
 
     .artist-section-profile-wrapper {
-        padding-bottom: 30px;
+    padding-bottom: 30px;
     }
 
     .line-height {
-        line-height: 1.4;
+    line-height: 1.4;
     }
 
-/** 헤더 관련 **/
+    /** 헤더 관련 **/
     .header-main {
     display: flex;
     align-items: center;
@@ -85,23 +78,24 @@
     padding: none;
     background-color: none;
     color: blue;
+    font-weight: 500;
     }
 
     .header-label {
-        position: relative;
-        bottom: 1px;
+    position: relative;
+    bottom: 1px;
     }
 
     .header-arrow {
-        max-height: 15px;
-        padding-right: 6px;  
+    max-height: 15px;
+    padding-right: 6px;
     }
 
     .go-back {
-        cursor: pointer;
+    cursor: pointer;
     }
 
-/** release 섹션 관련 **/
+    /** release 섹션 관련 **/
 
     ul,
     li {
@@ -111,15 +105,15 @@
     }
 
     ol {
-        padding: 0;
-        margin: 0;
+    padding: 0;
+    margin: 0;
     }
 
     .ol-tracklist > li {
-        padding-right: 4px;
+    padding-right: 4px;
     }
 
-/** 이미지 (후버) 관련 **/
+    /** 이미지 (후버) 관련 **/
     .cover-container {
     position: relative;
     display: inline-block;
@@ -161,56 +155,56 @@
     display: block;
     }
 
-/** 보드 갤러리 이미지 후버 관련 **/
+    /** 보드 갤러리 이미지 후버 관련 **/
     .profile-container {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
     }
 
     #profile-img-viewer {
-        max-height: 300px;
-        margin-bottom: 6px;
-        max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 6px;
+    max-width: 100%;
     }
 
     #profile-img-viewer img {
-        display: block;
-        max-width: 100%;
-        max-height: 300px;
+    display: block;
+    max-width: 100%;
+    max-height: 300px;
     }
 
     .profile-thumbnail-container {
-        display: flex;
-        max-width: 100%;
+    display: flex;
+    max-width: 100%;
     }
 
     .profile-thumbnail {
-        max-width: 100%;
-        max-height: calc(1ex / 0.32);
-        margin-right: 4px;
+    max-width: 100%;
+    max-height: calc(1ex / 0.32);
+    margin-right: 4px;
     }
 
     .profile-thumbnail img {
-        display: block;
-        max-width: 100%;
-        max-height: calc(1ex / 0.32);
+    display: block;
+    max-width: 100%;
+    max-height: calc(1ex / 0.32);
     }
 
     .profile-thumbnail:last-child {
-        margin-right: 0;
+    margin-right: 0;
     }
 
-/** 보드 관련 **/
+    /** 보드 관련 **/
 
-/* data-href 관련*/
+    /* data-href 관련*/
 
-.data-href,
-.data-href-outlink {
+    .data-href,
+    .data-href-outlink {
     cursor: pointer;
-}
+    }
 
-/** 반응형 관련 **/
+    /** 반응형 관련 **/
 
     @media (min-width: 480px) {
     .container {
@@ -249,23 +243,65 @@
     }
 
     .shadow-underline-simple {
-        text-shadow: 1px 2px 2px #000fff;
-        text-decoration: underline;
-        text-decoration-color: #000fff;
-        text-underline-offset: 3px;
+    text-shadow: 1px 2px 2px #000fff;
+    text-decoration: underline;
+    text-decoration-color: #000fff;
+    text-underline-offset: 3px;
     }
 
     .underline-wrapper {
-        position: relative;
-        display: inline-block; /* 또는 block에 따라 */
-        padding-bottom: 1px; /* 언더라인과의 간격 조정 */
+    position: relative;
+    display: inline-block; /* 또는 block에 따라 */
+    padding-bottom: 1px; /* 언더라인과의 간격 조정 */
     }
-    
+
     .underline-wrapper::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 15px;
-        border-bottom: 1.5px solid #000fff; /* 언더라인 스타일 */
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 15px;
+    border-bottom: 1.5px solid #000fff; /* 언더라인 스타일 */
     }
+
+/* div swap */
+.text-swap-container {
+    position: relative;
+    cursor: pointer;
+    max-width: 600px;
+    padding-top: 10px; /* 적절한 위쪽 패딩 값 */
+    padding-bottom: 10px; /* 적절한 아래쪽 패딩 값 */
+}
+
+.korean-text {
+    /* position: absolute; 삭제 또는 주석 처리 */
+    /* top: 0; left: 0; width: 100%; height: 100%; */
+    background-color: transparent;
+    display: none;
+}
+
+.text-swap-container:hover .english-text {
+    display: none; /* 마우스 호버 시 영문 텍스트를 숨김 */
+}
+
+.text-swap-container:hover .korean-text {
+    display: block; /* 마우스 호버 시 한글 텍스트를 보이게 함 */
+}
+
+.has-triangle {
+    position: relative;
+    max-width: 600px; /* 기존 스타일 유지 */
+    display: flex; /* Flexbox 컨테이너로 설정 */
+    align-items: center; /* 세로 방향 가운데 정렬 (텍스트와 삼각형 높이가 다를 경우 보기 좋게 정렬) */
+    justify-content: flex-end; /* 오른쪽으로 모든 아이템을 정렬 */
+}
+
+.has-triangle::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #000fff;
+    border-top: 8px solid transparent;
+    margin-left: 0; /* 혹시 모를 마진 제거 */
+}
