@@ -43,16 +43,16 @@
     padding-left: 23px;
     }
 
+    .artist-section-info {
+        padding-bottom: 9px;
+    }
+
     .artist-section-sub-info {
     line-height: calc(1ex / 0.32);
     }
 
     .artist-section-outlink {
-        padding-top: 8px;
-    }
-
-    .artist-section-release-list {
-    padding-bottom: 30px;
+        padding-bottom: 16px;
     }
 
     .artist-section-discription {
@@ -268,8 +268,8 @@
     position: relative;
     cursor: pointer;
     max-width: 600px;
-    padding-top: 16px; /* 적절한 위쪽 패딩 값 */
-    padding-bottom: 10px; /* 적절한 아래쪽 패딩 값 */
+    padding-bottom: 30px;
+    text-align: justify; 
 }
 
 .korean-text {
@@ -285,22 +285,4 @@
 
 .text-swap-container:hover .korean-text {
     display: block; /* 마우스 호버 시 한글 텍스트를 보이게 함 */
-}
-
-.has-triangle {
-    position: relative;
-    max-width: 600px; /* 기존 스타일 유지 */
-    display: flex; /* Flexbox 컨테이너로 설정 */
-    align-items: center; /* 세로 방향 가운데 정렬 (텍스트와 삼각형 높이가 다를 경우 보기 좋게 정렬) */
-    justify-content: flex-end; /* 오른쪽으로 모든 아이템을 정렬 */
-}
-
-.has-triangle::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-bottom: 8px solid #000fff;
-    border-top: 8px solid transparent;
-    margin-left: 0; /* 혹시 모를 마진 제거 */
 }
