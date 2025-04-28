@@ -176,6 +176,7 @@
     .profile-thumbnail-container {
     display: flex;
     max-width: 100%;
+    max-height: 300px;
     }
 
     .profile-thumbnail {

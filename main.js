@@ -42,6 +42,45 @@
     });
 
     //이미지 후버 temp//
+    document.addEventListener('DOMContentLoaded', () => {
+        const coverContainers = document.querySelectorAll('.cover-container');
+    
+        coverContainers.forEach(container => {
+        const thumbnail = container.querySelector('.thumbnail');
+        const originalImage = container.querySelector('.original-image');
+        let isImageVisible = false;
+    
+        thumbnail.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent potential link navigation
+    
+            if (!isImageVisible) {
+            originalImage.style.display = 'block';
+            isImageVisible = true;
+    
+              // 클릭된 이미지 외의 다른 이미지는 숨김
+            coverContainers.forEach(otherContainer => {
+                if (otherContainer !== container) {
+                const otherImage = otherContainer.querySelector('.original-image');
+                otherImage.style.display = 'none';
+                }
+            });
+    
+              // 클릭 이벤트가 document까지 전파되는 것을 막음
+            event.stopPropagation();
+            }
+        });
+        });
+    
+        // document에 클릭 이벤트 리스너를 추가하여 이미지 숨김
+        document.addEventListener('click', () => {
+        coverContainers.forEach(container => {
+            const originalImage = container.querySelector('.original-image');
+            originalImage.style.display = 'none';
+            isImageVisible = false; // 모든 이미지 상태를 숨김으로 초기화
+        });
+        });
+    });
+
 
     //func-data-href//
     document.addEventListener("DOMContentLoaded", () => {
